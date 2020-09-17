@@ -17,7 +17,7 @@ client.on("guildMemberAdd", (member) => {
 
   welcomeChannel.send(`<@${newUser.id}> ${welcomeChannelComment}\n`);
 
-  member.addRole(guild.roles.find(role => role.name == "게스트"));
+  member.addRole(guild.roles.find(role => role.name == "테스트"));
 });
 
 client.on("guildMemberRemove", (member) => {
@@ -35,7 +35,7 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
-  if(message.content == '임남ㄴ안ㅁ어ㅏㄴㅇ머ㅏㅓㅁㄴ아ㅓㅏㅁㄴ어ㅏㅁㄴㅇㅋㅋ;;;;4번은 개인주의야embed') {
+  if(message.content == 'emmsadjkasdhjdashjmbed') {
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
@@ -52,8 +52,8 @@ client.on('message', (message) => {
       .setTimestamp()
       .setFooter('나긋해가 만듬', img)
 
-    message.channel.send(embed)
-  } else if(message.content == '임남ㄴ안ㅁ어ㅏㄴㅇ머ㅏㅓㅁㄴ아ㅓㅏㅁㄴ어ㅏㅁㄴㅇㅋㅋ;;;;4번은 개인주의야') {
+    message.channel.send(emb4231142124123zzzzed)
+  } else if(message.content == 'embed2') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
       {name: 'ping', desc: '현재 핑 상태'},
