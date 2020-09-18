@@ -11,6 +11,14 @@ client.on('ready', () => {
   client.user.setPresence({ game: { name: '나 봇 아니다' }, status: 'online' })
 });
 
+let state_list = [
+  '나는 빡빡이다',
+  'ㄴㄴ',
+  '안돼',
+]
+let state_list_index = 1;
+let change_delay = 3000; //
+
 client.on("guildMemberAdd", (member) => {
   const guild = member.guild;
   const newUser = member.user;
@@ -32,10 +40,13 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == 'ping') {
-    return message.reply('pong');
+  if(message.content == '서울사이버대학교') {
+      message.reply('https://www.youtube.com/watch?v=vqtHnuVzwoI')
+  } else if (message.content == '송한별') {
+      message.reply('송한변')
   }
-
+})
+  
   if(message.content == 'emㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ216bed') {
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     let embed = new Discord.RichEmbed()
@@ -178,7 +189,7 @@ client.on('message', (message) => {
         .catch(console.error)
     }
   }
-});
+;
 
 function checkPermission(message) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) {
